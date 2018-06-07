@@ -21,6 +21,12 @@ class BlogForm extends Component {
     });
   }
 
+  renderImage() {
+    if (this.props.blog.imageUrl) {
+      return <img src={'http://s3-us-east-2.amazonaws.com/my-blog-bucket-2342342343/' + this.props.blog.imageUrl} />;
+    }
+  }
+
   render() {
     return (
       <div>
